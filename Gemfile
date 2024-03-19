@@ -6,4 +6,4 @@ gem 'html-proofer'
 gem 'jekyll'
 gem 'rake'
 gem 'rubocop', require: false
-gem 's3_website'
+gem 's3_website_revived'
