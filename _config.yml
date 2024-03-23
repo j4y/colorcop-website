@@ -13,3 +13,9 @@ markdown: kramdown
 
 # exclude some directories and files that don't belong in the website
 exclude: [terraform, terragrunt, Rakefile, README.md]
+plugins:
+  - jekyll-gzip
+# instruct Jekyll::Gzip to gzip and keep the same filename
+gzip:
+  replace_files: true
+

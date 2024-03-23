@@ -7,3 +7,7 @@ gem 'jekyll'
 gem 'rake'
 gem 'rubocop', require: false
 gem 'rubocop-rake'
+
+group :jekyll_plugins do
+  gem 'jekyll-gzip'
+end
