@@ -1,3 +1,4 @@
 ruby 3.3.1
 terragrunt 0.55.18
 terraform 1.5.7
+node 21.7.1
