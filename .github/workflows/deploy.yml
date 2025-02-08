@@ -24,17 +24,8 @@ jobs:
       with:
         bundler-cache: true
 
-    - name: Setup Terraform
-      uses: hashicorp/setup-terraform@v3.1.2
-      with:
-        terraform_version: 1.5.7
-        terraform_wrapper: true
-
-    - name: Setup Terragrunt
-      uses: autero1/action-terragrunt@v3.0.2
-      with:
-        terragrunt-version: 0.55.18
-        token: ${{ secrets.GITHUB_TOKEN }}
+     - uses: jdx/mise-action@v2
+     # .tool-versions will be read from repo root
 
     - name: Terragrunt Plan
       run: terragrunt plan --terragrunt-working-dir $TG_WORKING_DIR
@@ -56,4 +47,3 @@ jobs:
 
     - name: Invalidate Cloudfront
       run: aws cloudfront create-invalidation --distribution-id ${{ steps.terraform.outputs.distribution_id }} --paths "/*"
-
