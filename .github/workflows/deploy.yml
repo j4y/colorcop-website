@@ -24,8 +24,8 @@ jobs:
       with:
         bundler-cache: true
 
-     - uses: jdx/mise-action@v2
-     # .tool-versions will be read from repo root
+    - uses: jdx/mise-action@v2
+    # .tool-versions will be read from repo root
 
     - name: Terragrunt Plan
       run: terragrunt plan --terragrunt-working-dir $TG_WORKING_DIR
